@@ -114,6 +114,10 @@ theorem eq_start_ray_of_eq_value_eq_end_ray {ang₁ ang₂ : Angle P} (h : ang�
 
 theorem eq_of_eq_value_eq_start_ray {ang₁ ang₂ : Angle P} (h : ang₁.start_ray = ang₂.start_ray) (v : ang₁.value = ang₂.value) : ang₁ = ang₂ := Angle.ext ang₁ ang₂ h (eq_end_ray_of_eq_value_eq_start_ray h v)
 
+--An angle spaned by a ray and its reverse must value π.
+--it is an immediate corollary of theorem 'reverse_ray_iff_sum_of_angle_eq_pi' in Angle_ex
+theorem ang_mk_ray_rev_is_pi {r : Ray P} : (Angle.mk r r.reverse Ray.source_of_rev_eq_source).value = π := sorry
+
 -- this section should talks about when different making methods make the same angle
 section mk_compatibility
 

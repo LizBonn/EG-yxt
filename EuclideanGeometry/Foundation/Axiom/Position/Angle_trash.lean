@@ -45,6 +45,8 @@ theorem ang_value_rev_eq_neg_value {ang : Angle P} :  ang.reverse.value = - ang.
   unfold value DirObj.AngDiff Dir.AngDiff reverse
   simp
 
+theorem pi_ang_rev_is_pi {ang : Angle P} (pi : ang.value = π ) :  ang.reverse.value = π  := by simp[ang_value_rev_eq_neg_value, pi]
+
 end Angle
 
 end EuclidGeom

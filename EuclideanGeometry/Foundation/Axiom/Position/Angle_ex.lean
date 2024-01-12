@@ -31,7 +31,7 @@ def supplementary : Angle P where
 
 -- If two oriented angles share a same side, then they are supplementary oriented angles if and only if the sum of two angles is π or -π   `Do I use {ang1} or (ang1)?
 
-theorem reverse_ray_iff_sum_of_angle_eq_pi {ang1 : Angle P} {ang2 : Angle P} (h: ang1.end_ray = ang2.start_ray) : ang1.end_ray = ang2.start_ray.reverse ↔ ang1.value + ang2.value = π ∨ ang1.value + ang2.value = -π := by sorry
+theorem reverse_ray_iff_sum_of_angle_eq_pi {ang1 : Angle P} {ang2 : Angle P} (h: ang1.end_ray = ang2.start_ray) : ang1.start_ray = ang2.end_ray.reverse ↔ ang1.value + ang2.value = π := by sorry
 
 theorem right_of_supp_of_right (rt : IsRightAngle ang) :  IsRightAngle ang.supplementary := by sorry
 
